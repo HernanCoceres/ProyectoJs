@@ -4,4 +4,57 @@
 body {
     background-color: #eaebe0;
     font-family: nunito;
+    color: #202020;
+    margin: 0%;
+}
+
+a {
+    text-decoration: none;
+    color: #202020;
+    align-content: center;
+}
+
+li {
+    list-style: none;
+}
+/**Estilos para la barra de navegacion**/
+h1{
+    display: inline-block;
+    margin: 0.5rem;
+    font-size: 60px;
+}
+
+header {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    background-color: #dbdbd5;
+    box-shadow: 15px 5px 10px #48529944;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav_bar {
+    display: flex;
+    padding-left: 0;
+    font-size: 1.5rem;
+    justify-content: space-around;
+    width: 50%;
+    margin: 0;
+}
+
+.contenedor_usuario {
+    display: flex;
+    position: fixed;
+    right: 5%;
+    top: 5%;
+    text-align: center;
+}
+
+.sesion_usuario { 
+    font-size: 1.2rem;
+    margin-left: 3px;
 }
