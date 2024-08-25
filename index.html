@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rimini</title>
     <link rel="stylesheet" href="/css/style.css">
-    <script src="Js/script.js"></script>
+    <script src="js/script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
@@ -13,10 +13,10 @@
 <body>
     <header>
         <div>
-            <H1>Rimini</H1>
+            <H1 id="titulo">Rimini</H1>
             <div class="contenedor_usuario">
                 <img class="icono_usuario" src="./imagenes/imagenes-barra-nav/icono-usuario.png" alt="icono de usuario">
-                <a class="sesion_usuario" href="#">Iniciar sesion</a>
+                <a id="iniciar_sesion" class="sesion_usuario" href="#">Iniciar sesion</a>
                 </div>
         </div>
         <nav>
@@ -27,6 +27,13 @@
             <li><a href="./html/preguntas.html" class="link_nav">Preguntas frecuentes</a></li>
         </ul></nav>
     </header>
-    <link rel="stylesheet" href="">
+    <div class="panel_sesion">
+        <div class="contenedor_form">
+            <form class="form_inicio-sesion" action="">
+            <input id="input_nombre" class="inputs" type="text" placeholder="Tu nombre">
+            <button class="inputs" id="enviar_form">Enviar</button>
+        </form>
+    </div>
+    </div>
 </body>
 </html>
