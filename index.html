@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rimini</title>
     <link rel="stylesheet" href="/css/style.css">
-    <script src="js/script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
@@ -15,8 +14,9 @@
         <div>
             <H1 id="titulo">Rimini</H1>
             <div class="contenedor_usuario">
-                <img class="icono_usuario" src="./imagenes/imagenes-barra-nav/icono-usuario.png" alt="icono de usuario">
+                <img class="icono_sesion" src="./imagenes/imagenes-barra-nav/icono-usuario.png" alt="icono de usuario">
                 <a id="iniciar_sesion" class="sesion_usuario" href="#">Iniciar sesion</a>
+                <a href=""><img class="icono_sesion" src="./imagenes/imagenes-barra-nav/icono-carrito.png" alt="icono carrito"></a>
                 </div>
         </div>
         <nav>
@@ -27,13 +27,53 @@
             <li><a href="./html/preguntas.html" class="link_nav">Preguntas frecuentes</a></li>
         </ul></nav>
     </header>
-    <div class="panel_sesion">
-        <div class="contenedor_form">
-            <form class="form_inicio-sesion" action="">
-            <input id="input_nombre" class="inputs" type="text" placeholder="Tu nombre">
-            <button class="inputs" id="enviar_form">Enviar</button>
-        </form>
-    </div>
-    </div>
+    <main>
+        <div class="contenedor_ropa">
+                <div class="sub_contenedor-ropa">
+                    <img class="items" src="./imagenes/imagenes-ropa/remeras/remerablanca.png" alt="remera blanca">
+                    <div class="informacion_prenda">
+                        <p>Remera blanca</p>
+                        <p>5000$</p>
+                        <button class="boton_comprar">Comprar</button>
+                    </div>
+                 </div>
+                <div class="sub_contenedor-ropa">
+                    <img class="items" src="./imagenes/imagenes-ropa/remeras/remeranegra.png" alt="remera negra">
+                    <div class="informacion_prenda">
+                        <p>Remera negra</p>
+                        <p>5500$</p>
+                        <button class="boton_comprar">Comprar</button>
+                    </div>
+                </div>
+                <div class="sub_contenedor-ropa">
+                    <img class="items" src="./imagenes/imagenes-ropa/remeras/remeragris.png" alt="remera gris">
+                    <div class="informacion_prenda">
+                        <p>Remera gris</p>
+                        <p>5200$</p>
+                        <button class="boton_comprar">Comprar</button>
+                    </div>
+                </div>
+        </div>
+        <section class="carrito">
+            <div id="carrito">
+                <h2>Carrito de Compras</h2>
+                <ul id="lista-carrito"></ul>
+                <div id="total">
+                    Total: $0
+                </div>
+            </div>
+        </section>
+        <div class="panel_sesion">
+            <div class="contenedor_form">
+                <form class="form_inicio-sesion" action="">
+                <input id="input_nombre" class="inputs" type="text" placeholder="Tu nombre">
+                <button class="inputs" id="enviar">Enviar</button>
+            </form>
+        </div>
+        </div>
+    </main>
+    <footer>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

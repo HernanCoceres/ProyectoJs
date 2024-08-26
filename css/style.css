@@ -1,6 +1,10 @@
 /**Estilos predeterminados
 
 **/
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #eaebe0;
     font-family: nunito;
@@ -28,7 +32,8 @@ h1{
 
 header {
     text-align: center;
-    position: sticky;
+    position: fixed;
+    top: 0;
     width: 100%;
     background-color: #dbdbd5;
     box-shadow: 15px 5px 10px #48529944;
@@ -54,17 +59,51 @@ nav {
     right: 5%;
     top: 5%;
     text-align: center;
+    width: 200px;
+    justify-content: space-around;
 }
 
 .sesion_usuario { 
     font-size: 1.2rem;
-    margin-left: 3px;
+}
+.icono_sesion {
+    width: 32px;
+    height: 32px;
+}
+/**Estilo para items (ropa)**/
+.contenedor_ropa {
+    margin-top: 200px;
+    justify-content: space-evenly;
+    display: flex;
 }
 
+.items {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 15px 5px 10px #00000044;
+}
 
+.comprar {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #dbdbd5;
+    border: solid 1px #000000;
+    border-radius: 8px;
+    box-shadow: 15px 5px 10px #00000044;
+    box-sizing: border-box;
+}
+
+.sub_contenedor-ropa {
+    text-align: center;
+}
+.div_comprar {
+ width: 100px;
+ height: 100px;
+}
 /**Estilo para formulario de inicio de sesion**/
 .panel_sesion {
-    display: block;
+    display: none;
 }
 
 .form_inicio-sesion {
@@ -90,9 +129,17 @@ nav {
 }
 
 .inputs {
+    font-family: nunito;
     width: 400px;
+    height: 30px;
     padding: 0%;
     border: 1px solid #111111;
-    border-radius: 3px;
+    border-radius: 8px;
     box-sizing: border-box;
+    margin-top: 5%;
+}
+
+.carrito {
+    width: 100vw;
+    text-align: center;
 }
