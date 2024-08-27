@@ -21,7 +21,7 @@ botonEnviar.addEventListener("click", () => {
 
 /*Seccion del carrito*/
 const botonesComprar = document.querySelectorAll(".boton_comprar");
-let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+let carrito = JSON.parse(localStorage.getItem("carrito"));
 
 botonesComprar.forEach((boton) => {
     boton.addEventListener("click", agregarAlCarrito);
@@ -32,7 +32,7 @@ function agregarAlCarrito(event) {
     const boton = event.target;
     const prendaContenedor = boton.closest(".sub_contenedor-ropa");
     const nombrePrenda = prendaContenedor.querySelector(".informacion_prenda p:nth-child(1)").textContent;
-    const precioPrenda = parseFloat(prendaContenedor.querySelector(".informacion_prenda p:nth-child(2)").textContent.replace('$', '').trim());
+    const precioPrenda = parseFloat(prendaContenedor.querySelector(".informacion_prenda p:nth-child(2)").textContent.replace('$', ''));
     const prendaExistente = carrito.find(item => item.nombre === nombrePrenda);
 /*validaciones si la prenda esta o no esta */
     if (prendaExistente) {
@@ -50,19 +50,20 @@ function agregarAlCarrito(event) {
 
 /*Para mostrar en el html*/
 function actualizarCarrito() {
-    const listaCarrito = document.getElementById("lista-carrito");
+    const listaCarrito = document.getElementById("lista_carrito");
     listaCarrito.innerHTML = "";
 
     carrito.forEach((item, index) => {
         const li = document.createElement("li");
         li.textContent = `${item.nombre} - $${item.precio} x${item.cantidad}`;
 /*boton para borra elemento*/
-        const botonEliminar = document.createElement("button");
-        botonEliminar.textContent = "Eliminar";
-        botonEliminar.onclick = () => eliminarDelCarrito(index);
-        li.appendChild(botonEliminar);
+const botonEliminar = document.createElement("button");
+    botonEliminar.textContent = "Eliminar";
+    botonEliminar.classList.add("boton_eliminar");
+    botonEliminar.onclick = () => eliminarDelCarrito(index);
+    li.appendChild(botonEliminar);
 
-        listaCarrito.appendChild(li);
+listaCarrito.appendChild(li);
     });
 
     actualizarTotal();
