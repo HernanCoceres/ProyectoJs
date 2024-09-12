@@ -16,7 +16,18 @@
             <div class="contenedor_usuario">
                 <img class="icono_sesion" src="./imagenes/imagenes-barra-nav/icono-usuario.png" alt="icono de usuario">
                 <a id="iniciar_sesion" class="sesion_usuario" href="#">Iniciar sesion</a>
-                <a href=""><img class="icono_sesion" src="./imagenes/imagenes-barra-nav/icono-carrito.png" alt="icono carrito"></a>
+                <a id="boton_carrito"><img class="icono_sesion" src="./imagenes/imagenes-barra-nav/icono-carrito.png" alt="icono carrito"></a>
+                <section id="seccion_carrito" class="carrito">
+                    <div id="carrito">
+                        <h2>Carrito de Compras</h2>
+                        <ul id="lista_carrito">
+                        </ul>
+                        <button href="" id="finalizar_compra">Finalizar Compra</button>
+                        <div id="total">
+                            Total: $0
+                        </div>
+                    </div>
+                </section>
                 </div>
         </div>
         <nav>
@@ -54,15 +65,6 @@
                     </div>
                 </div>
         </div>
-        <section class="carrito">
-            <div id="carrito">
-                <h2>Carrito de Compras</h2>
-                <ul id="lista_carrito"></ul>
-                <div id="total">
-                    Total: $0
-                </div>
-            </div>
-        </section>
         <div class="panel_sesion">
             <div class="contenedor_form">
                 <form class="form_inicio-sesion" action="">
@@ -75,5 +77,6 @@
     <footer>
     </footer>
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
