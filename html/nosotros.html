@@ -13,10 +13,22 @@
 <body>
     <header>
         <div>
-            <H1>Rimini</H1>
+            <H1 id="titulo">Rimini</H1>
             <div class="contenedor_usuario">
-                <img class="icono_usuario" src="../imagenes/imagenes-barra-nav/icono-usuario.png" alt="icono de usuario">
-                <a class="sesion_usuario" href="#">Iniciar sesion</a>
+                <img class="icono_sesion" src="../imagenes/imagenes-barra-nav/icono-usuario.png" alt="icono de usuario">
+                <a id="iniciar_sesion" class="sesion_usuario" href="#">Iniciar sesion</a>
+                <a id="boton_carrito"><img class="icono_sesion" src="../imagenes/imagenes-barra-nav/icono-carrito.png" alt="icono carrito"></a>
+                <section id="seccion_carrito" class="carrito">
+                    <div id="carrito">
+                        <h2>Carrito de Compras</h2>
+                        <ul id="lista_carrito">
+                        </ul>
+                        <button href="" id="finalizar_compra">Finalizar Compra</button>
+                        <div id="total">
+                            Total: $0
+                        </div>
+                    </div>
+                </section>
                 </div>
         </div>
         <nav><ul class="nav_bar">
@@ -26,5 +38,11 @@
             <li><a href="./preguntas.html" class="link_nav">Preguntas frecuentes</a></li>
         </ul></nav>
     </header>
+    <main>
+        <section class="seccion_parrafo"><h2 class="titulo_pag">Sobre nosotros</h2>
+            <p class="texto_nosotros">En Remini, nos inspiramos en la elegancia y la tradición de la hermosa ciudad italiana para crear prendas que combinan estilo y comodidad. Fundada en 2024, nuestra marca busca capturar la esencia de la moda italiana con un enfoque moderno, ofreciendo ropa de alta calidad que refleja un equilibrio perfecto entre lo clásico y lo contemporáneo. Nos dedicamos a ofrecer colecciones únicas que no solo te hagan sentir bien, sino que también resalten tu personalidad y estilo.<br>
+                Aunque estamos comenzando este emocionante viaje, nuestro objetivo es convertirnos en una marca reconocida dentro de la industria de la moda. Creemos firmemente en la importancia de los detalles, desde la selección cuidadosa de telas hasta el diseño de cada prenda, para garantizar que nuestros clientes reciban solo lo mejor. Cada pieza que encuentres en Remini está hecha con pasión y dedicación, con la esperanza de que forme parte de tus momentos más especiales.<br>
+                En Remini, no solo vendemos ropa; compartimos una forma de vida inspirada en la cultura italiana, en la autenticidad y en el arte de vestir bien. Queremos que nuestros clientes se sientan conectados con algo más allá de una simple prenda, que experimenten la calidad y el estilo en cada compra, y que se unan a nosotros en este viaje hacia el reconocimiento y la expansión de nuestra marca.</p></section>
+    </main>
 </body>
 </html>

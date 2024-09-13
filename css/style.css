@@ -14,6 +14,11 @@ body {
     height: 100vh;
 }
 
+main {
+    margin-top: 200px;
+    align-self: center;
+}
+
 a {
     text-decoration: none;
     color: #202020;
@@ -72,7 +77,6 @@ nav {
 }
 /**Estilo para items (ropa)**/
 .contenedor_ropa {
-    margin-top: 200px;
     justify-content: space-evenly;
     display: flex;
 }
@@ -174,6 +178,12 @@ nav {
     box-shadow: 15px 5px 10px #00000044;
     position: absolute;
     top: 50px;
+}
+
+.seccion_parrafo {
+    width: 70vw;
+    text-align: center;
+    margin: auto;
 }
 
 #lista_carrito {
