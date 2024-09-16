@@ -5,26 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rimini</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="fondo_productos">
     <header>
         <div>
-            <H1>Rimini</H1>
+            <H1 id="titulo">Rimini</H1>
             <div class="contenedor_usuario">
-                <img class="icono_usuario" src="../imagenes/imagenes-barra-nav/icono-usuario.png" alt="icono de usuario">
-                <a class="sesion_usuario" href="#">Iniciar sesion</a>
+                <img class="icono_sesion" src="../imagenes/imagenes-barra-nav/icono-usuario.png" alt="icono de usuario">
+                <a id="iniciar_sesion" class="sesion_usuario" href="#">Iniciar sesion</a>
+                <a id="boton_carrito"><img class="icono_sesion" src="../imagenes/imagenes-barra-nav/icono-carrito.png" alt="icono carrito"></a>
+                <section id="seccion_carrito" class="carrito">
+                    <div id="carrito">
+                        <h2>Carrito de Compras</h2>
+                        <ul id="lista_carrito">
+                        </ul>
+                        <button href="" id="finalizar_compra">Finalizar Compra</button>
+                        <div id="total">
+                            Total: $0
+                        </div>
+                    </div>
+                </section>
                 </div>
         </div>
-        <nav><ul class="nav_bar">
+        <nav>
+            <ul class="nav_bar">
             <li><a href="../index.html" class="link_nav">Inicio</a></li>
             <li><a href="#" class="link_nav">Productos</a></li>
             <li><a href="./nosotros.html" class="link_nav">Nosotros</a></li>
-            <li><a href="./preguntas.html" class="link_nav">Preguntas frecuentes</a></li>
         </ul></nav>
     </header>
+    <main>
+        <section class="seccion_ropa">
+            <h2>Remeras</h2>
+            <div class="contenedor_ropa">
+                <div class="sub_contenedor-ropa">
+                    <img class="items" src="../imagenes/imagenes-ropa/remeras/remerablanca.png" alt="remera blanca">
+                    <div class="informacion_prenda">
+                        <p>Remera blanca</p>
+                        <p>5000$</p>
+                        <button class="boton_comprar">Comprar</button>
+                    </div>
+                 </div>
+                <div class="sub_contenedor-ropa">
+                    <img class="items" src="../imagenes/imagenes-ropa/remeras/remeranegra.png" alt="remera negra">
+                    <div class="informacion_prenda">
+                        <p>Remera negra</p>
+                        <p>5500$</p>
+                        <button class="boton_comprar">Comprar</button>
+                    </div>
+                </div>
+                <div class="sub_contenedor-ropa">
+                    <img class="items" src="../imagenes/imagenes-ropa/remeras/remeragris.png" alt="remera gris">
+                    <div class="informacion_prenda">
+                        <p>Remera gris</p>
+                        <p>5200$</p>
+                        <button class="boton_comprar">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="seccion_ropa seccion_buzos">
+            <h2>Buzos</h2>
+            <div class="contenedor_ropa">
+                <div class="sub_contenedor-ropa">
+                    <img class="items" src="../imagenes/imagenes-ropa/buzos/buzo-blanco.jpg" alt="buzo blanco">
+                    <div class="informacion_prenda">
+                        <p>Buzo blanco</p>
+                        <p>7000$</p>
+                        <button class="boton_comprar">Comprar</button>
+                    </div>
+                 </div>
+                <div class="sub_contenedor-ropa">
+                    <img class="items" src="../imagenes/imagenes-ropa/buzos/buzo-negro.webp" alt="buzo negro">
+                    <div class="informacion_prenda">
+                        <p>Buzo negro</p>
+                        <p>7500$</p>
+                        <button class="boton_comprar">Comprar</button>
+                    </div>
+                </div>
+                <div class="sub_contenedor-ropa">
+                    <img class="items" src="../imagenes/imagenes-ropa/buzos/buzo-gris.png" alt="buzo gris">
+                    <div class="informacion_prenda">
+                        <p>Buzo gris</p>
+                        <p>7200$</p>
+                        <button class="boton_comprar">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="seccion_ropa">
+            <h2>Camperas</h2>
+            <div class="contenedor_ropa">
+                <div class="sub_contenedor-ropa">
+                    <img class="items" src="../imagenes/imagenes-ropa/camperas/campera-blanca.jpg" alt="remera blanca">
+                    <div class="informacion_prenda">
+                        <p>Campera blanca</p>
+                        <p>10000$</p>
+                        <button class="boton_comprar">Comprar</button>
+                    </div>
+                 </div>
+                <div class="sub_contenedor-ropa">
+                    <img class="items" src="../imagenes/imagenes-ropa/camperas/campera-negra.jpeg" alt="remera negra">
+                    <div class="informacion_prenda">
+                        <p>Campera negra</p>
+                        <p>10500$</p>
+                        <button class="boton_comprar">Comprar</button>
+                    </div>
+                </div>
+                <div class="sub_contenedor-ropa">
+                    <img class="items" src="../imagenes/imagenes-ropa/camperas/campera-gris.jpg" alt="remera gris">
+                    <div class="informacion_prenda">
+                        <p>Campera gris</p>
+                        <p>10200$</p>
+                        <button class="boton_comprar">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="panel_sesion">
+            <div class="contenedor_form">
+                <form class="form_inicio-sesion" action="">
+                <input id="input_nombre" class="inputs" type="text" placeholder="Tu nombre">
+                <button class="inputs" id="enviar">Enviar</button>
+            </form>
+        </div>
+        </div>
+    </main>
+    <footer>
+    </footer>
+    <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
