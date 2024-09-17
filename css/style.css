@@ -30,6 +30,33 @@ a {
 li {
     list-style: none;
 }
+
+footer {
+  margin-top: 100px;
+  border-top: 1px solid #eaebe0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remini_footer {
+  font-size: 1.5rem;
+  margin-left: 50px;
+}
+
+.derechos_reservados {
+  margin-top: 70px;
+}
+
+.seccion_redes {
+  margin-right: 50px;
+}
+
+.icono_contacto {
+  width: 25px;
+  height: 25px;
+}
+
 /**Estilos para la barra de navegacion**/
 h1{
     display: inline-block;
