@@ -198,21 +198,20 @@ nav {
 }
 
 /**Estilo para formulario de inicio de sesion**/
-.panel_sesion {
-    display: none;
-}
-
-.form_inicio-sesion {
+.formulario_inicio-sesion {
     display: flex;
     flex-direction: column;
     width: 300px;
     height:300px;
     position: relative;
     margin: auto;
+    margin-top: 10%;
     justify-content: center;
 }
 
-.contenedor_form {
+.contenedor_formulario {
+    z-index: 1000;
+    display: none;
     position: absolute;
     background-color: #202020cb;
     width: 100%;

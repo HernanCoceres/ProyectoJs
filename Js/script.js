@@ -1,5 +1,5 @@
 const linkIniciarSesion = document.getElementById("iniciar_sesion");
-const panelSesion = document.querySelector(".panel_sesion");
+const panelSesion = document.querySelector(".contenedor_formulario");
 const botonEnviar = document.getElementById("enviar");
 const inputNombre = document.getElementById("input_nombre");
 
@@ -9,17 +9,24 @@ linkIniciarSesion.addEventListener("click", () => {
 });
 
 /**condicion por si esta vacio**/
-botonEnviar.addEventListener("click", () => {
-    const nombre = inputNombre.value;
+botonEnviar.addEventListener("click", (event) => {
+    event.preventDefault();
+    const nombre = inputNombre.value.trim() || "";
     if (nombre) {
         linkIniciarSesion.textContent = nombre;
         panelSesion.style.display = "none";
     } else {
-        alert("Ingresa un nombre");
+        swal({
+            title: "Debes ingresar un nombre",
+            text: "Solo se permiten letras y espacios.",
+            icon: "warning",
+            button: false,
+            timer: 1200,
+          });
     }
 });
 
-/* Seccion del carrito */
+/* Seccion del carrito, (inicio el carrito vacio por las dudas)*/
 const botonesComprar = document.querySelectorAll(".boton_comprar");
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 const botonCarrito = document.getElementById("boton_carrito");
@@ -30,14 +37,22 @@ botonesComprar.forEach((boton) => {
     boton.addEventListener("click", agregarAlCarrito);
 });
 
-/* Mostrar/Ocultar carrito */
+/* Mostrar/Ocultar carrito y condicion de asigno evento solo si existen botones */
 botonCarrito.addEventListener("click", () => {
-    if (seccionCarrito.style.display === "none") {
-      seccionCarrito.style.display = "block";
+    if (seccionCarrito.style.display === "block") {
+        seccionCarrito.style.display = "none";
     } else {
-      seccionCarrito.style.display = "none";
+        seccionCarrito.style.display = "block";
     }
 });
+
+if (botonesComprar.length > 0) {
+    botonesComprar.forEach((boton) => {
+        if (boton.addEventListener) {
+            boton.addEventListener("click", agregarAlCarrito);
+        }
+    });
+}
 
 /* Funcion agregar cosas para el carrito */
 function agregarAlCarrito(event) {
